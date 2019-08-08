@@ -2,7 +2,6 @@
 #include <memory>
 #include "Poco/SplitterChannel.h"
 #include "Poco/ConsoleChannel.h"
-// #include "Poco/SimpleFileChannel.h"
 #include "Poco/FileChannel.h"
 #include "Poco/PatternFormatter.h"
 #include "Poco/FormattingChannel.h"
@@ -12,7 +11,6 @@ using Poco::SplitterChannel;
 using Poco::ConsoleChannel;
 using Poco::PatternFormatter;
 using Poco::FormattingChannel;
-// using Poco::SimpleFileChannel;
 using Poco::FileChannel;
 using Poco::AutoPtr;
 TV_NAME_SPACE_BEGIN
@@ -25,6 +23,7 @@ Logger::Logger()
     AutoPtr<PatternFormatter> pattern_formatter (new PatternFormatter("%E(%L-%H-%M-%S):%p:%P:%I:%U:%u#%t"));
     AutoPtr<FormattingChannel> formatter_channle(new FormattingChannel(pattern_formatter , file_channel));
     Poco::Logger::root().setChannel(formatter_channle);
+    Poco::Logger::root().setLevel(8);
 }
 void Logger::Debug(std::string content)
 {

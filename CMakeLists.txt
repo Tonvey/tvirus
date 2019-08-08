@@ -14,6 +14,9 @@ endif()
 find_library(bzip2 bz2)
 target_link_libraries(${PROJECT_NAME} ${bzip2})
 
+set(CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG} -Wall -D_DEBUG")
+set(CMAKE_CXX_FLAGS_RELEASE "${CMAKE_CXX_FLAGS_RELEASE} -Wall")
+
 #add git revision in source file
 find_program(GIT_SCM git DOC "Git version control")
 mark_as_advanced(GIT_SCM)
