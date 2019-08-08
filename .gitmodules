@@ -1,0 +1,4 @@
+[submodule "third_party/bsdiff"]
+	path = third_party/bsdiff
+	url = https://github.com/Tonvey/bsdiff.git
+    branch = master
