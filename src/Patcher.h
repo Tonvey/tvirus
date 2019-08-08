@@ -1,6 +1,7 @@
 #pragma once
 #include "Macro.h"
 #include <string>
+#include <stdexcept>
 TV_NAME_SPACE_BEGIN
 class Patcher
 {
