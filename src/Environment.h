@@ -2,15 +2,17 @@
 #include "Macro.h"
 #include <vector>
 #include <string>
+#include <Poco/Environment.h>
+#include "Singleton.hpp"
 TV_NAME_SPACE_BEGIN
-class Environment
+class Environment:
+    public Singleton<Environment>,
+    public Poco::Environment
 {
 public:
-    static Environment &GetInstance(){return smInstance;}
     void setArgs(std::vector<std::string> &args);
     std::vector<std::string> getArgs();
 private:
     std::vector<std::string> mArgs;
-    static Environment smInstance;
 };
 TV_NAME_SPACE_END

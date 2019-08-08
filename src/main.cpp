@@ -24,6 +24,7 @@ int main(int argc , char **argv)
 #else
     cout<<"Unsupport platform"<<endl;
 #endif
-    Updater::Update("./pat");
+    cout<<Environment::osName()<<endl;
+    Updater::GetInstance().Update("./pat");
     return 0;
 }
