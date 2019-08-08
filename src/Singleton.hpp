@@ -7,7 +7,6 @@ class Singleton
 public:
     static T &GetInstance()
     {
-        static T smInstance;
         return smInstance;
     }
 private:
@@ -16,6 +15,7 @@ private:
     Singleton& operator=(const Singleton&) = delete;
     Singleton& operator=(Singleton&&) = delete;
 protected:
+    static inline T smInstance;
     Singleton(){};
     virtual ~Singleton() { }
 };

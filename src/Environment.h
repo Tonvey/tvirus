@@ -12,6 +12,10 @@ class Environment:
 public:
     void setArgs(std::vector<std::string> &args);
     std::vector<std::string> getArgs();
+    std::string GetGitRevision()const
+    {
+        return GIT_REVISION;
+    }
 private:
     std::vector<std::string> mArgs;
 };
