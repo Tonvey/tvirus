@@ -2,10 +2,6 @@
     path = third_party/bsdiff
     url = https://github.com/Tonvey/bsdiff.git
     branch = master
-[submodule "third_party/LuaJIT"]
-    path = third_party/LuaJIT
-    url = https://github.com/LuaJIT/LuaJIT.git
-    branch = master
 [submodule "third_party/lua-poco"]
 	path = third_party/lua-poco
 	url = https://github.com/ma-bo/lua-poco.git
