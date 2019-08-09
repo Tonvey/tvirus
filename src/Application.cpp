@@ -14,17 +14,11 @@ Application::Application(int argc,char **argv)
         args.push_back(argv[i]);
     }
     Environment::GetInstance().setArgs(args);
+    //init log module
+    Logger::GetInstance();
 }
 int Application::run()
 {
-    Logger::GetInstance();
-    logger_trace("trace");
-    logger_debug("debug");
-    logger_infomation("infomation");
-    logger_warning("warning");
-    logger_error("error");
-    logger_critical("critical");
-    logger_fatal("fatal");
     return 0;
 }
 TV_NAME_SPACE_END
