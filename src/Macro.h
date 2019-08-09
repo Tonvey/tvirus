@@ -1,5 +1,5 @@
 #pragma once
-#include "gitrevision.h"
+extern const char *GIT_REVISION;
 #define TV_NAME_SPACE tvirus
 #define TV_NAME_SPACE_BEGIN namespace TV_NAME_SPACE {
 #define TV_NAME_SPACE_END }
