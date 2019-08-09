@@ -14,6 +14,15 @@ endif()
 find_library(bzip2 bz2)
 target_link_libraries(${PROJECT_NAME} ${bzip2})
 
+find_package(LUA 5.3)
+if(LUA_FOUND)
+  include_directories(${LUA_INCLUDE_DIR})
+  target_link_libraries(${PROJECT_NAME} ${LUA_LIBRARIES} )
+elseif()
+  message("Lua53 not found")
+  exit(-1)
+endif()
+
 set(CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG} -Wall -D_DEBUG")
 set(CMAKE_CXX_FLAGS_RELEASE "${CMAKE_CXX_FLAGS_RELEASE} -Wall")
 

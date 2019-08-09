@@ -19,6 +19,7 @@ Application::Application(int argc,char **argv)
 }
 int Application::run()
 {
+    this->mScriptEngine.run();
     return 0;
 }
 TV_NAME_SPACE_END
